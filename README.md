@@ -13,6 +13,6 @@ This is meant to be a convox app (gen2).  Create this app, set the environment a
 
 ### instance-restarter
 
-Nightly restarts a the single oldest EC2 instance.  This is born from a problem I experience where my dockerd CPU usage gradually increases over time.
+Nightly terminates (and allows ECS to restart) a the single oldest EC2 instance.  This is born from a problem I experience where my dockerd CPU usage gradually increases over time.
 
 * INSTANCE_AGE_DAYS: number of days before instances are eligible for termination.  Default: 3.
