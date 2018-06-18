@@ -1,0 +1,15 @@
+environment:
+  - API_URL
+  - API_KEY
+  - INSTANCE_AGE_DAYS=3
+
+services:
+  convox-utils:
+    build: .
+    scale: 0
+
+timers:
+  instance-restarter:
+    service: convox-utils
+    schedule: "0 3 * * ?"
+    command: /src/instance-restarter.sh

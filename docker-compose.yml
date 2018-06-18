@@ -1,0 +1,5 @@
+version: '2'
+services:
+  instance-restarter:
+    build: .
+    command: /src/instance-restarter.sh
