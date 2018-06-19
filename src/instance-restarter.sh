@@ -11,7 +11,7 @@ TO_TERMINATE=`curl -k -X GET -s --header 'Content-Type: application/x-www-form-u
 if [ "$TO_TERMINATE" ]
 then
   echo "Instance to terminate: ${TO_TERMINATE}"
-  curl -k -X DELETE -s --header 'Content-Type: application/x-www-form-urlencoded' --header 'Accept: text/plain' --header "Authorization: Basic ${API_KEY}" "${API_URL}/${TO_TERMINATE}"
+  curl -k -X DELETE -s -o /dev/null --header 'Content-Type: application/x-www-form-urlencoded' --header 'Accept: text/plain' --header "Authorization: Basic ${API_KEY}" "${API_URL}/${TO_TERMINATE}"
 else
   echo "No instance to be terminated"
 fi
